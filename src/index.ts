@@ -1,25 +1,14 @@
-import { clerkPlugin, getAuth } from '@clerk/fastify';
-import Fastify from 'fastify';
+import { clerkPlugin, getAuth } from "@clerk/fastify";
+import Fastify from "fastify";
 
 const fastify = Fastify({
-  logger: true
+  logger: true,
 });
 
 fastify.register(clerkPlugin);
 
-// Declare a route
-fastify.get('/', async function handler (request, reply) {
-    try {
-        // Use `getAuth()` to get the user's ID
-        const { userId } = getAuth(request);
-        if (!userId) {
-            reply.status(401).send({ error: 'Unauthorized' });
-        }
-        return { userId };
-    }
-    catch (error) {
-        reply.status(500).send({ error: 'Internal Server Error' });
-    }
+fastify.get("/health", async (request, reply) => {
+  return reply.status(200).send("I'm Alive!");
 });
 
 // Run the server!

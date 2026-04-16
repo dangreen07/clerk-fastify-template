@@ -6,7 +6,7 @@ A template project integrating Clerk authentication with Fastify and Drizzle ORM
 
 - **Authentication**: Secure user authentication with [Clerk](https://clerk.dev/)
 - **API Server**: Fast and low overhead web framework using [Fastify](https://www.fastify.io/)
-- **Database**: PostgreSQL database with [Drizzle ORM](https://orm.drizzle.team/) and [Neon](https://neon.tech/) serverless Postgres
+- **Database**: PostgreSQL database with [Drizzle ORM](https://orm.drizzle.team/)
 
 ## Getting Started
 
@@ -18,12 +18,14 @@ A template project integrating Clerk authentication with Fastify and Drizzle ORM
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/dangreen07/clerk-fastify-template.git
    cd clerk-fastify-template
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
@@ -48,6 +50,7 @@ A template project integrating Clerk authentication with Fastify and Drizzle ORM
 ### Running the Server
 
 Start the development server:
+
 ```
 npm run dev
 ```
